@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ubah Data</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="header"> <a href="admin.html" class="logo">Admin Dashboard</a>
+        <div class="navbar"> <a href="admin.html">Dashboard</a> </div>
+    </div>
+    <h1>Ubah Data Produk</h1>
+    <form onsubmit="updateData(event)" enctype="multipart/form-data"> <input type="hidden" id="id">
+        <ul>
+            <li> <label for="nama">Nama Produk: </label> <input type="text" id="nama" required> </li>
+            <li> <label for="kategori">Kategori: </label> <input type="text" id="kategori" required> </li>
+            <li> <label for="harga">Harga: </label> <input type="number" id="harga" required> </li>
+            <li> <label for="stok">Stok: </label> <input type="number" id="stok" required> </li>
+            <li> <label for="deskripsi">Deskripsi: </label> <textarea id="deskripsi" required></textarea> </li>
+            <li> <button type="submit">Ubah Data!</button> </li>
+        </ul>
+    </form>
+    <script>
+        // Function to get the query parameter value by name
+        function getQueryParam(param) {
+            let urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        // Load data when the page is loaded
+        window.onload = function () {
+            let id = getQueryParam("id");
+            if (id) {
+                let data = getData();
+                let item = data.find(product => product.id == id);
+                if (item) {
+                    document.getElementById("id").value = item.id;
+                    document.getElementById("nama").value = item.nama;
+                    document.getElementById("kategori").value = item.kategori;
+                    document.getElementById("harga").value = item.harga;
+                    document.getElementById("stok").value = item.stok;
+                    document.getElementById("deskripsi").value = item.deskripsi;
+                }
+            }
+        };
+    </script>
+</body>
+
+</html>

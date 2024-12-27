@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah Data</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="header">
+        <a href="admin.html" class="logo">Admin Dashboard</a>
+        <div class="navbar">
+            <a href="admin.html">Dashboard</a>
+        </div>
+    </div>
+    <h1>Tambah Data Produk</h1>
+    <form onsubmit="addData(event)" enctype="multipart/form-data">
+        <ul>
+            <li>
+                <label for="nama">Nama Produk: </label>
+                <input type="text" id="nama" required>
+            </li>
+            <li>
+                <label for="kategori">Kategori: </label>
+                <input type="text" id="kategori" required>
+            </li>
+            <li>
+                <label for="harga">Harga: </label>
+                <input type="number" id="harga" required>
+            </li>
+            <li>
+                <label for="stok">Stok: </label>
+                <input type="number" id="stok" required>
+            </li>
+            <li>
+                <label for="deskripsi">Deskripsi: </label>
+                <textarea id="deskripsi" required></textarea>
+            </li>
+            <li>
+                <button type="submit">Tambah Data!</button>
+            </li>
+        </ul>
+    </form>
+</body>
+
+</html>

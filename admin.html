@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="header">
+        <a href="#" class="logo">Admin Dashboard</a>
+        <div class="navbar">
+            <a href="tambah.html">Tambah Data</a>
+        </div>
+    </div>
+    <h1>Inventaris Toko</h1>
+    <form onsubmit="searchData(event)">
+        <input type="text" id="keyword" placeholder="Masukkan keyword pencarian" size="40" style="margin-bottom: 10px;"
+            autofocus autocomplete="off">
+        <button type="submit">Cari!</button>
+    </form>
+    <div class="table-container">
+        <table border="1" cellpadding="10" cellspacing="0" style="margin: auto;">
+            <thead>
+                <tr>
+                    <th>NO</th>
+                    <th>Aksi</th>
+                    <th>Nama Produk</th>
+                    <th>Kategori</th>
+                    <th>Harga</th>
+                    <th>Stok</th>
+                    <th>Deskripsi</th>
+                </tr>
+            </thead>
+            <tbody id="dataList">
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
