@@ -24,7 +24,7 @@ function addData(event) {
     data.push(newData);
     setData(data);
     alert("Data berhasil ditambahkan!");
-    window.location.href = "admin.html";
+    window.location.href = "index.html";
 }
 
 // Function to read data and display it
@@ -76,7 +76,7 @@ function updateData(event) {
     data[index] = updatedData;
     setData(data);
     alert("Data berhasil diubah!");
-    window.location.href = "admin.html";
+    window.location.href = "index.html";
 }
 
 // Function to load data for editing
